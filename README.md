@@ -2,10 +2,10 @@
 This project shows how I clean data using SQL 
 
 ## INTRODUCTION 
-Data cleaning or wrangling refers to a steps taken to clean and transform our data after querying our database, to turn raw data into an Analytical dataset ready for analysis this iis a prerequisite for every successfull data analysis
+Data cleaning or wrangling refers to a steps taken to clean and transform our data after querying our database, to turn raw data into an Analytical dataset ready for analysis this is a prerequisite for every successfull data analysis
 this helps the Analyst to efficiently and perfectly analyse our data for good and informed business decisions 
 
-In this project I'll walk you through the steps I used in cleaning and transforming the datasets gotten from my local PostgreSQL database, we'll be dealing with two different datasets throughout this project, the first dataset is the john&Johnsons dataset and imaginary news paper selling company I'll use this for to show all the cleaning 
+In this project I'll walk you through a few steps I used in cleaning and transforming the datasets gotten from my local PostgreSQL database, we'll be dealing with two different datasets throughout this project, the first dataset is the john&Johnsons dataset and imaginary news paper selling company I'll use this for to show all the cleaning 
 processes I take while cleaning my datasets, And the second data set S.F_crime_data which is a dataset that contains data on crime and all related to a every crime in the data 
  
 ### GETTING TO KNOW OUR DATASETS 
