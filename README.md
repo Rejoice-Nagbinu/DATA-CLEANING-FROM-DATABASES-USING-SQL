@@ -22,17 +22,17 @@ At this point I'll take you through how I write codes to clean my data and make 
 - how do I do these first I'll have to split the primary_poc which I already did in our first instance, next I'll concatenate in the order I want the email address to be formed, I'll use a sub query to to perform my extraction of the values, and then the outer query to call the values I need, so as to improve runtime performance and optimize my code 
 
 3. From our second dataset the SF_crime dataset, I brought in this second dataset because our first dataset the date has already been cleaned and put in the correct format, I'll use this to show how to change date to a more analyzable format 
--- let's get to know the datset with a brief look at the dataset
+- let's get to know the datset with a brief look at the dataset
 
--- and hereafter we take a look at the date column, you can see that the date column is not in the year-month-day format which is a best practice for sql and also the timestamp all of it was at 8:00:00am another wrong fill into our date column
+- and hereafter we take a look at the date column, you can see that the date column is not in the year-month-day format which is a best practice for sql and also the timestamp all of it was at 8:00:00am another wrong fill into our date column
 
--- let's check to see if the dates columns has different lengths, so that while changing the format it is applied to every row in the correct step
+-let's check to see if the dates columns has different lengths, so that while changing the format it is applied to every row in the correct step
 
--- now how do I make this date column clean and in line with best practices and also ready to use for my analysis I'll have to split the date truncated to day since the timestamp is a wrong fill, and then concatenate the newly arrange date truncated to the day and then cast it as DATE, what this does is that it change ls the data type to a date data type in SQL 
+- now how do I make this date column clean and in line with best practices and also ready to use for my analysis I'll have to split the date truncated to day since the timestamp is a wrong fill, and then concatenate the newly arrange date truncated to the day and then cast it as DATE, what this does is that it change ls the data type to a date data type in SQL 
 
 4. Back to our first dataset the john&johnson dataset, what if we had null values in orders table, account column and wanted to fill them maybe after getting their correct values from the data entry department with data from the accounts table, ID column. how do we do this, we'll use the coalesce function to update or fill out bills with our desired values.
--- my code below 
+- my code below 
 
 5. What if I'd like to replace the order table, account column with 0. 
--- you just the same code but instead of a.id for the replacement value you use 0 instead
+- you just the same code but instead of a.id for the replacement value you use 0 instead
 
