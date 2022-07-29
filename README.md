@@ -26,7 +26,7 @@ At this point I'll take you through how I write codes to clean my data and make 
 
 - and hereafter we take a look at the date column, you can see that the date column is not in the year-month-day format which is a best practice for sql and also the timestamp all of it was at 8:00:00am another wrong fill into our date column
 
--let's check to see if the dates columns has different lengths, so that while changing the format it is applied to every row in the correct step
+- let's check to see if the dates columns has different lengths, so that while changing the format it is applied to every row in the correct step
 
 - now how do I make this date column clean and in line with best practices and also ready to use for my analysis I'll have to split the date truncated to day since the timestamp is a wrong fill, and then concatenate the newly arrange date truncated to the day and then cast it as DATE, what this does is that it change ls the data type to a date data type in SQL 
 
