@@ -15,8 +15,23 @@ FROM accounts;
  SELECT first_name, last_name, CONCAT(first_name, '.', last_name, '@', name, '.com')
  FROM t1; 
 
- -- no 3here we'll use the second dataset from our database the SF_crime dataset to change the format of our date 
+ -- no 3 here we'll use the second dataset from our database the SF_crime dataset to change the format of our date 
+ -- firstly let's take a brief veiw at the dataset 
 
+ SELECT * 
+ FROM sf_crime_data 
+ LIMIT 10; 
+
+ -- secondly let's take a look at our at our date column 
+ SELECT date 
+ FROM sf_crime_data; 
+
+-- thirdly let's check to seek if all the length of date is the same 
+ SELECT length (date), min(length (date)), max(length (date)) 
+ FROM sf_crime_data; 
+ 
+-- lastly let's change the format of our date to the much more analysis ready format
+ 
  SELECT date orig_date, (SUBSTR(date, 7, 4) || '-' || LEFT(date, 2) || '-' || SUBSTR(date, 4, 2))::DATE new_date
  FROM sf_crime_data; 
 
