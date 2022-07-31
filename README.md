@@ -13,13 +13,21 @@ processes I take while cleaning my datasets, And the second data set S.F_crime_d
 - The second dataset contains just one table and many columns which are, date,category, incident_num, descript, resolution, address et all. 
 
 ## DATA CLEANING 
-At this point I'll take you through how I write codes to clean my data and make it ready my transforming it into a form I'll need for my analysis 
+At this point I'll take you through how I write codes to clean my data and make it ready by transforming it into a form I'll need for my analysis 
  
 1. From our first dataset the john&johnson dataset, In the accounts table, primary_poc(point of contact) column, primary_poc has the combined values of both the first name and the second name of the poc, but I'll need the names separated as first and last name. 
 - how do I do this in sql, I'll have to split the names to form two separate columns. My code below and result 
 
+![Screenshot_20220726-171508_1](https://user-images.githubusercontent.com/107328546/182004176-3f03e3cd-e0b4-4d77-9b68-62f474ae43ed.jpg)
+
+![Screenshot_20220726-171508_2](https://user-images.githubusercontent.com/107328546/182004193-fed67568-2166-4c9d-9814-e8210190eb9a.jpg)
+
 2. From our john&johnson dataset, my manager wants me to create an email for each primary_poc, and says it should be the first name of the poc, last name of the poc@, company name.com 
 - how do I do these first I'll have to split the primary_poc which I already did in our first instance, next I'll concatenate in the order I want the email address to be formed, I'll use a sub query to to perform my extraction of the values, and then the outer query to call the values I need, so as to improve runtime performance and optimize my code 
+
+![Screenshot_20220726-172712_1](https://user-images.githubusercontent.com/107328546/182004220-31ced316-3e7f-4cd3-89b2-6a5e3a9414e4.jpg)
+
+![Screenshot_20220726-172712_2](https://user-images.githubusercontent.com/107328546/182004227-40ab7d8e-5a77-47bf-a2cf-6b6d593fa221.jpg)
 
 3. From our second dataset the SF_crime dataset, I brought in this second dataset because our first dataset the date has already been cleaned and put in the correct format, I'll use this to show how to change date to a more analyzable format 
 - let's get to know the datset with a brief look at the dataset
