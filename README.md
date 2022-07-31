@@ -32,9 +32,21 @@ At this point I'll take you through how I write codes to clean my data and make 
 #### 3. From our second dataset the SF_crime dataset, I brought in this second dataset because our first dataset the date has already been cleaned and put in the correct format, I'll use this to show how to change date to a more analyzable format 
 - let's get to know the datset with a brief look at the dataset
 
+![Screenshot_20220731-012448_1](https://user-images.githubusercontent.com/107328546/182004861-d673d4dd-1556-4992-a1f2-ff8770c74909.jpg)
+
+![Screenshot_20220731-012448_2](https://user-images.githubusercontent.com/107328546/182004869-5f7d9211-d619-4a24-8c82-8a5ecee4a4bd.jpg)
+
 - and hereafter we take a look at the date column, you can see that the date column is not in the year-month-day format which is a best practice for sql and also the way i keep my dates column for easier analysis, also timestamp all of it was at 8:00:00am another wrong fill into our date column
 
-- let's check to see if the dates columns has different lengths, so that while changing the format it is applied to every row in the correct step
+![Screenshot_20220731-012514_1](https://user-images.githubusercontent.com/107328546/182004880-71b91f78-1edc-4edf-a565-e85c8bb4327a.jpg)
+
+![Screenshot_20220731-012514_2](https://user-images.githubusercontent.com/107328546/182004885-9f3770ca-3f46-4f3e-b28f-277ac549c8dc.jpg)
+
+- let's check to see if the dates columns has different lengths, so that while changing the format it is applied to every row in the correct step, here we can see that the mininum value of the date colunm and maximum value are the same, therefore we have the same date length
+
+
+
+
 
 - now how do I make this date column clean and in line with best practices and also ready to use for my analysis I'll have to split the date truncated to day since the timestamp is a wrong fill, and then concatenate the newly arrange date truncated to the day and then cast it as DATE, what this does is that it change ls the data type to a date data type in SQL 
 
